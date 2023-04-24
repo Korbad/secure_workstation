@@ -16,4 +16,4 @@ ansible-pull -U git@github.com:Korbad/ansible-collection-korbad.project_manageme
 ansible-pull -U git@github.com:Korbad/secure_workstation.git -i localhost, --accept-host-key --clean --purge
 
 # # Set up workstation configuration
-ansible-playbook ~/managed_git_repos/secure_workstation/workstation.yml
+ansible-playbook ~/managed_git_repos/korbad_secure_workstation/workstation.yml
