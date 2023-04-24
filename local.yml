@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  vars:
+    ansible_user: "{{ lookup('env','USER') }}"
+    ansible_connection: local
+  roles:
+  - name: korbad.project_management.managed_git_repo
+    vars:
+        managed_git_repo_dirname: secure_workstation
+        git_url: git@github.com:Korbad/secure_workstation.git
