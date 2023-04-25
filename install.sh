@@ -49,7 +49,6 @@ fi
 ssh-add "$SSH_KEY_FILE"
 echo "SSH key added to the agent."
 
-
 # Update the system
 sudo pacman -Syu --noconfirm
 
@@ -60,10 +59,10 @@ sudo pacman -S ansible --noconfirm
 ansible --version
 
 # Install the korbad.project_management collection
-ansible-pull -U git@github.com:Korbad/ansible-collection-korbad.project_management.git -i localhost, --accept-host-key --clean --purge
+ansible-pull -U https://github.com/Korbad/ansible-collection-korbad.project_management.git -i localhost, --accept-host-key --clean --purge
 
 # # Download the secure_workstation playbooks (using the project_management collection)
-ansible-pull -U git@github.com:Korbad/secure_workstation.git -i localhost, --accept-host-key --clean --purge
+ansible-pull -U https://github.com/Korbad/secure_workstation.git -i localhost, --accept-host-key --clean --purge
 
 # # Set up workstation configuration
 ansible-playbook ~/managed_git_repos/korbad_secure_workstation/workstation.yml
