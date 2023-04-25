@@ -24,14 +24,31 @@ fi
 chmod 600 "$SSH_KEY_FILE"
 chmod 644 "${SSH_KEY_FILE}.pub"
 
-# Start the ssh-agent if not running
-if ! pgrep -x "ssh-agent" > /dev/null; then
-    eval "$(ssh-agent -s)"
+# Function to start the ssh-agent and set environment variables
+start_ssh_agent() {
+    echo "Starting ssh-agent..."
+    ssh-agent | grep -v "echo" > "$SSH_KEY_DIR/.ssh_agent_env"
+    . "$SSH_KEY_DIR/.ssh_agent_env"
+    echo "SSH agent started."
+}
+
+# Check if the SSH agent is running, and if not, start it and add the key
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # Check if an existing agent environment file can be used
+    if [ -f "$SSH_KEY_DIR/.ssh_agent_env" ]; then
+        . "$SSH_KEY_DIR/.ssh_agent_env"
+        if ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
+            start_ssh_agent
+        fi
+    else
+        start_ssh_agent
+    fi
 fi
 
 # Add the SSH key to the agent
 ssh-add "$SSH_KEY_FILE"
 echo "SSH key added to the agent."
+
 
 # Update the system
 sudo pacman -Syu --noconfirm
