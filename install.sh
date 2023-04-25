@@ -1,5 +1,29 @@
 #!/bin/bash
 
+# Define variables
+SSH_KEY_DIR="$HOME/.ssh"
+SSH_KEY_FILE="$SSH_KEY_DIR/id_rsa"
+
+# Check if the .ssh directory exists, if not, create it
+if [ ! -d "$SSH_KEY_DIR" ]; then
+    echo "Creating .ssh directory..."
+    mkdir -p "$SSH_KEY_DIR"
+    chmod 700 "$SSH_KEY_DIR"
+fi
+
+# Check if the SSH key pair exists, if not, create it
+if [ ! -f "$SSH_KEY_FILE" ]; then
+    echo "No SSH key pair found. Generating a new one..."
+    ssh-keygen -t rsa -b 4096 -f "$SSH_KEY_FILE" -N ""
+    echo "SSH key pair generated successfully."
+else
+    echo "SSH key pair already exists."
+fi
+
+# Set the correct permissions for the key files
+chmod 600 "$SSH_KEY_FILE"
+chmod 644 "${SSH_KEY_FILE}.pub"
+
 # Update the system
 sudo pacman -Syu --noconfirm
 
