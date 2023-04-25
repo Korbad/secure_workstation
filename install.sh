@@ -24,6 +24,15 @@ fi
 chmod 600 "$SSH_KEY_FILE"
 chmod 644 "${SSH_KEY_FILE}.pub"
 
+# Start the ssh-agent if not running
+if ! pgrep -x "ssh-agent" > /dev/null; then
+    eval "$(ssh-agent -s)"
+fi
+
+# Add the SSH key to the agent
+ssh-add "$SSH_KEY_FILE"
+echo "SSH key added to the agent."
+
 # Update the system
 sudo pacman -Syu --noconfirm
 
