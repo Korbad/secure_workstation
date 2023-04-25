@@ -7,11 +7,11 @@
   - name: korbad.project_management.managed_git_repo
     vars:
       managed_git_repo_dirname: korbad_secure_workstation
-      git_url: git@github.com:Korbad/secure_workstation.git
+      git_url: https://github.com/Korbad/secure_workstation.git
       git_pull: true
   - name: korbad.project_management.managed_ansible_collection
     vars:
-      git_url: git@github.com:Korbad/ansible-collection-korbad.workstation.git
+      git_url: https://github.com/Korbad/ansible-collection-korbad.workstation.git
       collection_namespace: korbad
       collection_name: workstation
       git_pull: true
