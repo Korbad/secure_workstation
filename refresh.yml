@@ -15,4 +15,4 @@
   # plasma tweaks requires psutil in venv
   # - name: korbad.workstation.plasma_tweaks
 
-  - name: korbad.workstation.disable_power_saving
+  # - name: korbad.workstation.disable_power_saving
