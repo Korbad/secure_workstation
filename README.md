@@ -10,4 +10,4 @@ To onboard a machine (Arch Linux), execute the following command from the termin
 
 Once installed, the secure workstation software can be refreshed by running:
 
-```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/refresh.yml```
+```bash ~/managed_git_repos/korbad_secure_workstation/refresh.sh```
