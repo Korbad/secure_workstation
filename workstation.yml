@@ -5,9 +5,9 @@
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   roles:
+  - name: korbad.workstation.sudoers_current_user
   - name: korbad.workstation.meta_dependencies
   # TODO: - name: korbad.project_management.venv?
   # TODO: - name: korbad.workstation.korbad
-  # TODO: - name: korbad.workstation.sudoers_current_user
   # TODO: - name: korbad.workstation.cloudflare_tunnel
 
