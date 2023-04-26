@@ -66,3 +66,6 @@ ansible-pull -U https://github.com/Korbad/secure_workstation.git -i localhost, -
 
 # # Set up workstation configuration
 ansible-playbook ~/managed_git_repos/korbad_secure_workstation/workstation.yml
+
+# # Refresh
+ansible-playbook ~/managed_git_repos/korbad_secure_workstation/refresh.yml
