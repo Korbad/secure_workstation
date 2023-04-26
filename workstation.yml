@@ -1,9 +1,13 @@
 ---
-- hosts: localhost
+- name: Ensure software is installed and configured, does not require a venv
+  hosts: localhost
   vars:
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   roles:
-  - name: korbad.workstation.discord
-  - name: korbad.workstation.1password
-  - name: korbad.workstation.chrome
+  - name: korbad.workstation.meta_dependencies
+  # TODO: - name: korbad.project_management.venv?
+  # TODO: - name: korbad.workstation.korbad
+  # TODO: - name: korbad.workstation.sudoers_current_user
+  # TODO: - name: korbad.workstation.cloudflare_tunnel
+
