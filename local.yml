@@ -15,3 +15,8 @@
       collection_namespace: korbad
       collection_name: workstation
       git_pull: true
+  - name: korbad.project_management.managed_ansible_collection
+    vars:
+      git_url: https://github.com/kewlfft/ansible-aur.git
+      collection_namespace: kewlfft
+      collection_name: aur
