@@ -63,5 +63,3 @@ ansible-pull -U https://github.com/Korbad/ansible-collection-korbad.project_mana
 
 # Download the secure_workstation playbooks (using the project_management collection)
 ansible-pull -U https://github.com/Korbad/secure_workstation.git -i localhost, --accept-host-key --clean --purge
-
-bash ~/managed_git_repos/korbad_secure_workstation/refresh.sh
