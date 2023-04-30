@@ -16,7 +16,7 @@
     git_pull: true
 
 - include_role:
-    name: korbad.secrets managed_ansible_collection
+    name: korbad.project_management.managed_ansible_collection
   vars:
     git_url: https://github.com/Korbad/ansible-collection-korbad.secrets.git
     collection_namespace: korbad
