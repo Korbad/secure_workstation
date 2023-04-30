@@ -4,9 +4,4 @@
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   roles:
-  - name: korbad.project_management.pull_managed_git_repos
-  tasks:
-  - name: korbad.project_management.managed_project_manager
-    include_role:
-      name: korbad.project_management.managed_project_manager
-      tasks_from: pull
+  - name: managed_ansible_content
