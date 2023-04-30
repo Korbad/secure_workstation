@@ -1,0 +1,7 @@
+---
+- hosts: Freebeard
+  vars:
+    ansible_user: "{{ lookup('env','USER') }}"
+    ansible_connection: local
+  roles:
+  - gaming
