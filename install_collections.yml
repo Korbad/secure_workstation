@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Ensure software is installed and configured, does not require a venv
+  hosts: localhost
   vars:
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local

@@ -3,5 +3,10 @@
   vars:
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
-  roles:
-  - name: managed_ansible_content
+  tasks:
+  - include_role:
+      name: korbad.project_management.managed_git_repo
+    vars:
+      managed_git_repo_dirname: korbad_secure_workstation
+      git_url: https://github.com/Korbad/secure_workstation.git
+      git_pull: true
