@@ -10,8 +10,8 @@ To onboard a machine (Arch Linux), execute the following command from the termin
 
 Once installed, the secure workstation software can be refreshed by running:
 
-```bash ~/managed_git_repos/korbad_secure_workstation/self.sh; bash ~/managed_git_repos/korbad_secure_workstation/refresh.sh```
+```bash ~/managed_git_repos/korbad_secure_workstation/self.sh; bash ~/managed_git_repos/korbad_secure_workstation/install_collections.sh```
 
+```bash ~/managed_git_repos/korbad_secure_workstation/self.sh; bash ~/managed_git_repos/korbad_secure_workstation/pre_sudoers.sh```
 
-
-```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/local.yml```
+```bash ~/managed_git_repos/korbad_secure_workstation/self.sh; bash ~/managed_git_repos/korbad_secure_workstation/post_sudoers.sh```
