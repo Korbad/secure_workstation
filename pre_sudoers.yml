@@ -7,4 +7,3 @@
   roles:
   - name: korbad.workstation.git_https_instead_of_ssh
   - name: korbad.workstation.sudoers_current_user
-  - name: korbad.project_management.managed_vault_file

@@ -8,4 +8,4 @@
   - secrets
   - management_onboarding
   - development
-  - korbad.workstation.ssh_keygen_display_public_key
+  - korbad.workstation.ssh_key_display_public_key
