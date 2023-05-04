@@ -1,2 +1,14 @@
 ---
-- import_playbook: korbad.project_management.user_vars
+- hosts: localhost
+  vars:
+    ansible_user: "{{ lookup('env','USER') }}"
+    ansible_connection: local
+  roles:
+  - korbad.vars.git_config
+  - korbad.workstation.git_config
+  - korbad.workstation.git_ssh_config
+  - korbad.secrets.git_ssh_key
+  - korbad.project_management.managed_user_vars
+  - korbad.project_management.managed_git_repos
+  - korbad.project_management.managed_ansible_collections
+  - korbad.project_management.managed_ansible_roles
