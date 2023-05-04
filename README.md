@@ -17,6 +17,8 @@ Once installed, the secure workstation software can be refreshed by running:
 
 ```bash ~/managed_git_repos/korbad_secure_workstation/post_sudoers.sh```
 
+post_sudoers will display your PUBLIC ssh key, add this to your github account
+
 # Refresh
 
 ```bash ~/managed_git_repos/korbad_secure_workstation/refresh.sh```
@@ -24,5 +26,7 @@ Once installed, the secure workstation software can be refreshed by running:
 # After PUBLIC ssh key is added to github account
 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_github_ssh.yml```
+
+after ansible vars repo is created in github:
 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_git_vars_repo.yml```
