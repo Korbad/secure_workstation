@@ -24,3 +24,5 @@ Once installed, the secure workstation software can be refreshed by running:
 # After PUBLIC ssh key is added to github account
 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_github_ssh.yml```
+
+```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_git_vars_repo.yml```
