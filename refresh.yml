@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars:
+    ansible_user: "{{ lookup('env','USER') }}"
+    ansible_connection: local
+  roles:
+  - name: korbad.project_management.pull_repos
+    vars:
+      managed_git_repos_path: ~/
