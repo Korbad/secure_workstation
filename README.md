@@ -5,7 +5,7 @@ To onboard a machine (Arch Linux), execute the following command from the termin
 
 ```curl -sSL https://raw.githubusercontent.com/Korbad/secure_workstation/main/install.sh | bash```
 
-# Refresh
+# Base setup
 
 Once installed, the secure workstation software can be refreshed by running:
 
@@ -16,3 +16,7 @@ Once installed, the secure workstation software can be refreshed by running:
 ```bash ~/managed_git_repos/korbad_secure_workstation/pre_sudoers.sh```
 
 ```bash ~/managed_git_repos/korbad_secure_workstation/post_sudoers.sh```
+
+# Refresh
+
+```bash ~/managed_git_repos/korbad_secure_workstation/refresh.sh```
