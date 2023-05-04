@@ -1,0 +1,2 @@
+---
+- import_playbook: korbad.project_management.user_vars
