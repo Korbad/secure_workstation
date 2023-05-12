@@ -1,5 +1,7 @@
 ---
 dependencies:
+  - name: korbad.vars.hostname
+  - name: korbad.workstation.hostname
   - name: korbad.workstation.korbad
   - name: korbad.workstation.sshd
   # - name: korbad.workstation.cloudflare_tunnel
