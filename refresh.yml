@@ -10,3 +10,8 @@
       tasks_from: pull_repos.yml
     vars:
       managed_git_repos_path: ~/
+      
+  - name: korbad.project_management.managed_project_manager
+    include_role:
+      name: korbad.project_management.managed_project_manager
+      tasks_from: pull
