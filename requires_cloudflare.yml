@@ -4,4 +4,4 @@
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   roles:
-  - korbad.workstation.cloudflared_tunnel
+  - connectivity
