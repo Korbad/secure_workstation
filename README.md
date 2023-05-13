@@ -30,3 +30,5 @@ post_sudoers will display your PUBLIC ssh key, add this to your github account
 after ansible vars repo is created in github:
 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_git_vars_repo.yml```
+
+```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_cloudflare.yml```
