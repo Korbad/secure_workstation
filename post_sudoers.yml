@@ -4,8 +4,5 @@
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   roles:
-  - generic
-  - secrets
   - management_onboarding
-  - development
   - korbad.workstation.ssh_key_display_public_key

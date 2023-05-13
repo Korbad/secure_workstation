@@ -1,6 +1,0 @@
----
-dependencies:
-  - name: korbad.workstation.discord
-  - name: korbad.workstation.1password
-  - name: korbad.workstation.chrome
-  - name: korbad.workstation.obsidian_appimage
