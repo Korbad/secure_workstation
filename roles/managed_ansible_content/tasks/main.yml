@@ -1,47 +1,11 @@
 ---
-
 - include_role:
-    name: korbad.project_management.managed_git_repo
+    name: korbad.project_management.managed_git_repos
   vars:
-    managed_git_repo_dirname: korbad_secure_workstation
-    git_url: https://github.com/Korbad/secure_workstation.git
-    git_pull: true
+    managed_git_repos:
+      korbad_secure_workstation:
+        git_url: https://github.com/Korbad/secure_workstation.git
+        git_pull: true
 
 - include_role:
-    name: korbad.project_management.managed_ansible_collection
-  vars:
-    git_url: https://github.com/Korbad/ansible-collection-korbad.workstation.git
-    collection_namespace: korbad
-    collection_name: workstation
-    git_pull: true
-
-- include_role:
-    name: korbad.project_management.managed_ansible_collection
-  vars:
-    git_url: https://github.com/Korbad/ansible-collection-korbad.secrets.git
-    collection_namespace: korbad
-    collection_name: secrets
-    git_pull: true
-
-- include_role:
-    name: korbad.project_management.managed_ansible_collection
-  vars:
-    git_url: https://github.com/Korbad/ansible-collection-korbad.vars.git
-    collection_namespace: korbad
-    collection_name: vars
-    git_pull: true
-
-- include_role:
-    name: korbad.project_management.managed_ansible_collection
-  vars:
-    git_url: https://github.com/kewlfft/ansible-aur.git
-    collection_namespace: kewlfft
-    collection_name: aur
-
-- include_role:
-    name: korbad.project_management.pull_managed_git_repos
-
-- name: korbad.project_management.managed_project_manager
-  include_role:
-    name: korbad.project_management.managed_project_manager
-    tasks_from: pull
+    name: korbad.project_management.korbad_collections
