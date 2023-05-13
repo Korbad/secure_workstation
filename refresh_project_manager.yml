@@ -4,13 +4,6 @@
     ansible_user: "{{ lookup('env','USER') }}"
     ansible_connection: local
   tasks:
-  - name: Pull all git repos found in homedir or any subdirs
-    include_role:
-      name: korbad.project_management.managed_git_repos
-      tasks_from: pull_repos.yml
-    vars:
-      managed_git_repos_path: ~/
-      
   - name: korbad.project_management.managed_project_manager
     include_role:
       name: korbad.project_management.managed_project_manager
