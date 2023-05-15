@@ -1,4 +1,3 @@
 ---
 dependencies:
-- korbad.workstation.display
 - korbad.workstation.cloudflared_tunnel
