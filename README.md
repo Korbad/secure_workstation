@@ -27,8 +27,11 @@ post_sudoers will display your PUBLIC ssh key, add this to your github account
 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_github_ssh.yml```
 
-after ansible vars repo is created in github:
-
+# After ansible vars repo is created in github: 
 ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_git_vars_repo.yml```
 
-```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_cloudflare.yml```
+# After Cloudflare account is created:
+ ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/requires_cloudflare.yml```
+
+# To install social and gaming software:
+ ```ansible-playbook ~/managed_git_repos/korbad_secure_workstation/social_and_gaming.yml```
