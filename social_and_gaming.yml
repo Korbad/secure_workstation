@@ -6,3 +6,5 @@
   roles:
   - korbad.workstation.discord
   - korbad.workstation.discord_canary
+  - korbad.workstation.gaming
+  
